@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Extensions.Hosting;
 
 namespace AirlineSendAgent
 {
@@ -6,7 +7,11 @@ namespace AirlineSendAgent
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var host = Host.CreateDefaultBuilder()
+                .ConfigureServices((context, services) =>
+                {
+                })
+                .Build();
         }
     }
 }
